@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connectouch | AI Automation & Software Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary-bg': '#0A0E27',
+              'accent-bg': '#1A1A2E',
+              'primary-accent': '#00D9FF',
+              'secondary-accent-start': '#6366F1',
+              'secondary-accent-end': '#8B5CF6',
+              'success-accent': '#00FF88',
+              'text-primary': '#FFFFFF',
+              'text-secondary': '#A0AEC0',
+            },
+            animation: {
+              'gradient-bg': 'gradient-bg 15s ease infinite',
+              'infinite-scroll': 'infinite-scroll 40s linear infinite',
+              'infinite-scroll-reverse': 'infinite-scroll-reverse 40s linear infinite',
+            },
+            keyframes: {
+              'gradient-bg': {
+                '0%, 100%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'left center'
+                },
+                '50%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'right center'
+                }
+              },
+              'infinite-scroll': {
+                'from': { transform: 'translateX(0)' },
+                'to': { transform: 'translateX(-50%)' },
+              },
+              'infinite-scroll-reverse': {
+                'from': { transform: 'translateX(-50%)' },
+                'to': { transform: 'translateX(0)' },
+              },
+            },
+          },
+        },
+        plugins: [
+          function({ addUtilities }) {
+            addUtilities({
+              '.backface-hidden': {
+                'backface-visibility': 'hidden',
+              },
+            })
+          }
+        ]
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
+  }
+}
+</script>
+</head>
+  <body class="bg-primary-bg">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

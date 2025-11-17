@@ -1,0 +1,5 @@
+{
+  "name": "Connectouch AI Automation",
+  "description": "A sleek, animated website for Connectouch, an AI automation agency and software house. The site showcases services, technologies, and testimonials using a variety of sophisticated card animations with Framer Motion and Tailwind CSS.",
+  "requestFramePermissions": []
+}
